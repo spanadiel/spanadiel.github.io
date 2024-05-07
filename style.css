@@ -47,7 +47,7 @@ div.welcome-content {
 }
 div.welcome-headline {
     text-align: left;
-    font-size: 5em;
+    font-size: calc(min(5em, 12vw));
     font-weight: 900;
     color: #F2F2F2;
     padding-top: 2%;
