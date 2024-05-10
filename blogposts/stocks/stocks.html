@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- set meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="daniel reisinger, university of graz, critical transitions, early warning signals, complex networks, computational basics">
+        <meta name="author" content="Daniel Reisinger">
+
+        <!-- set title -->
+        <title>Daniel Reisinger</title>
+
+        <!-- set font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet"> 
+
+        <!-- set icon -->
+        <link rel="icon" type="image/x-icon" href="../../images/icon.png">
+        
+        <!-- set style -->
+        <link href="../blogstyle.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="page">
+
+            <!-- navigation -->
+            <div class="navbar">
+                <ul class="navlinks">
+                    <li><a href="../../index.html">notblue.<span class="red">red</span></a></li>
+                </ul>
+            </div>
+
+            <!-- blogpost -->
+            <div class="container">
+                <div class="container-title">Stocks Correlation Network</div>
+                <div class="container-text">Understanding the stock market can feel like navigating a maze of numbers and graphs. In this blogpost we try to visualize stock market information a bit differently, using a method by [1]: stock networks built from correlation matrices.</div>
+                <div class="container-text">Let us start with a simple visual journey through the stock market. We look at the average opening prices of S&P 500 stocks over a few years. This helps us see the big picture and spot trends over time. We also show a few example stocks that are part of the S&P 500 like Google, Nvidia, and Meta to see how they have been performing individually.</div>
+                <div class="container-image" style="max-width: 500px;">
+                    <img src="stocks-overview.png" alt="">
+                </div>
+                <div class="container-text">Now, let us try to condense this information into a stock network. Imagine each stock as a dot (or node) on a graph, and lines (or edges) connecting them represent how closely their prices move together. We create this network using correlation data from a specific year, like 2023. It is like connecting the dots to see how stocks influence each other.</div>
+                <div class="container-image" style="max-width: 500px;">
+                    <img src="stocks-network-23.png" alt="">
+                </div>
+                <div class="container-text">When we look at our stock network, we see clusters of closely connected stocks. These clusters show us groups of stocks that tend to move in sync. Within these clusters, some stocks stand out—they're like the popular kids in school, highly connected and influential.</div>
+                <div class="container-image" style="max-width: 500px;">
+                    <img src="stocks-network-22.png" alt="">
+                </div>
+                <div class="container-text">By comparing networks from different years, say 2022 and 2023, we can see how the market evolves over time. We might notice new clusters forming or changes in which stocks are the most influential. This can be interpreted as looking at before-and-after pictures to see how things have shifted.</div>
+                <div class="container-text">There is however an interesting twist: while it seems logical to focus on stocks that move together, sometimes looking at the opposite—stocks that don't move together—can be revealing. These less correlated stocks might offer a clearer view of what is really driving market ups and downs, free from clustered trends. Analyzing the fluctuations within those lesser correlated networks could potentially be used to better predict imminent market crashes [1, 2].</div>
+            </div>
+
+            <!-- references -->
+            <div class="references">
+                <div class="references-title">Literature</div>
+                <div class="ref">[1] Assaf Almog and Erez Shmueli. Structural entropy: Monitoring correlation-based networks over time with application to financial markets. <a href="https://www.nature.com/articles/s41598-019-47210-8" target="_blank">Link.</a></div>
+                <div class="ref">[2] Manfred Füllsack, Daniel Reisinger, Marie Kapeller, and Georg Jäger. Early warning signals from the periphery. <a href="https://link.springer.com/article/10.1007/s42001-021-00142-8">Link.</a></div>
+                <div class="ref"></div>
+
+            </div>
+            
+            <!-- contact -->
+            <div class="contact">
+                <div class="contact-headline"></div>
+                <div class="contact-description">Institute of<br>Environmental Systems Sciences<br>Merangasse 18,<br>8010 Graz</div>
+                <div class="contact-email">daniel.reisinger@uni-graz.at</div>
+            </div>
+        </div>
+    </body>
