@@ -103,7 +103,7 @@ div.info-num{
     text-align: center;
     width: 30px;
     height: 30px;
-    line-height: 30px;
+    line-height: 28px;
     margin: 3px;
 }
 div.info-num.active {
@@ -178,7 +178,7 @@ div.blog-num{
     text-align: center;
     width: 30px;
     height: 30px;
-    line-height: 30px;
+    line-height: 28px;
     margin: 3px;
 }
 div.blog-num.active {
@@ -263,7 +263,7 @@ div.paper-num{
     text-align: center;
     width: 30px;
     height: 30px;
-    line-height: 30px;
+    line-height: 28px;
     margin: 3px;
 }
 div.paper-num.active {
