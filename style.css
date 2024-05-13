@@ -299,20 +299,23 @@ div.contact {
     font-size: 1.05em;
     padding: 30px;
     padding-bottom: 100px;
-    max-width: 600px;
+    max-width: 500px;
     margin: 20px auto;
 }
 div.contact-headline {
-    margin-bottom: 20px;
     font-size: 1.05em;
 }
+div.contact-email {
+    padding-bottom: 20px;
+}
 div.contact-description {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     font-size: 1.05em;
 }
 div.contact-disclaimer {
-    padding-top: 20px;
     text-align: center;
+    max-width: 350px;
+    margin: auto;
 }
 
 
