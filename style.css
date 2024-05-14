@@ -57,7 +57,7 @@ div.welcome-headline {
 div.welcome-description {
     text-align: center;
     font-size: 1.5em;
-    text-align: justify;
+    text-align: left;
     color:#F2F2F2;
     padding-bottom: 60px;
 }
