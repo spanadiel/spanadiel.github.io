@@ -37,11 +37,11 @@
             <div class="container">
                 <div class="container-title">Creating a stocks correlation network</div>
                 <div class="container-text">Understanding the stock market can feel like navigating a maze of numbers and graphs. In this blogpost we try to visualize stock market information a bit differently, using a method by [1]: stock networks built from correlation matrices.</div>
-                <div class="container-text">Let us start with a simple visual journey through the stock market. We look at the average opening prices of S&P 500 stocks over a few years. This helps us see the big picture and spot trends over time. We also show a few example stocks that are part of the S&P 500 like Google, Nvidia, and Meta to see how they have been performing individually.</div>
+                <div class="container-text">Let us start with a simple visual journey through the stock market. We look at the average opening prices of S&P 500 stocks over a few years. This helps us see the big picture and spot trends over time. We also show a few example stocks that are part of the S&P 500 like Google, Nvidia, and Facebook to see how they have been performing individually.</div>
                 <div class="container-image" style="max-width: 500px;">
                     <img src="stocks-overview.png" alt="">
                 </div>
-                <div class="container-text">Now, let us try to condense this information into a stock network. Imagine each stock as a dot (or node) on a graph, and lines (or edges) connecting them represent how closely their prices move together. We create this network using correlation data from a specific year, like 2023. It is like connecting the dots to see how stocks align with each other.</div>
+                <div class="container-text">Now, let us try to condense this information into a stock network. Imagine each stock as a dot (or node) on a graph, and lines (or edges) connecting them represent how closely their prices move together. We create this network using correlation data from a specific time window, for example, the year 2023. More specifically, we compare the timeseries of one stock with every other stock in the index and calculate the Pearson correlation coefficient. If the correlation between the two stock timeseries is higher than a specific threshold that we define, then we draw a connection between the two nodes in our network. It is like connecting the dots to see how stocks align with each other.</div>
                 <div class="container-image" style="max-width: 500px;">
                     <img src="stocks-network-23.png" alt="">
                 </div>
@@ -49,8 +49,8 @@
                 <div class="container-image" style="max-width: 500px;">
                     <img src="stocks-network-22.png" alt="">
                 </div>
-                <div class="container-text">By comparing networks from different years, say 2022 and 2023, we can see how the market evolves over time. We might notice new clusters forming or changes in which stocks are the most influential. This can be interpreted as looking at before-and-after pictures to see how things have shifted.</div>
-                <div class="container-text">There is however an interesting twist: while it seems logical to focus on stocks that move together, sometimes looking at the opposite, that is stocks that do not move together, can be just as revealing. These less correlated stocks might offer a clearer view of what is really driving market ups and downs, free from clustered trends. Analyzing the fluctuations within those lesser correlated stocks could potentially be used to better predict imminent market crashes [1, 2].</div>
+                <div class="container-text">By comparing networks from different years, say 2022 and 2023, we can see how the market evolves over time. We might notice new clusters forming or changes in which stocks are the most influential. This can be interpreted as looking at before-and-after pictures to see how things have shifted. One benefit of this visualization is that we can calculate many interesting network metrics such as the clustering coefficient, the average shortest path length, or the degree assortativity coefficient, which offer a new way of analyzing and interpreting the stock market.</div>
+                <div class="container-text">For example, while it seems logical to focus on stocks that move together, sometimes looking at the opposite, that is stocks that do not move together, can be just as revealing. These lesser correlated stocks can offer a clearer view of what is actually driving market ups and downs, free from clustered trends and feedback loops. Analyzing the fluctuations within those lesser correlated stocks can be used to better predict imminent market crashes [1, 2].</div>
             </div>
 
             <!-- references -->
