@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- set meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="daniel reisinger, university of graz, critical transitions, early warning signals, complex networks, computational basics">
+        <meta name="author" content="Daniel Reisinger">
+
+        <!-- set title -->
+        <title>Daniel Reisinger</title>
+
+        <!-- set canonical -->
+        <link rel="canonical" href="https://notblue.red">
+
+        <!-- set font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;900&display=swap" rel="stylesheet"> 
+
+        <!-- set icon -->
+        <link rel="icon" type="image/x-icon" href="../../images/icon.png">
+        
+        <!-- set style -->
+        <link href="../blogstyle.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="page">
+
+            <!-- navigation -->
+            <div class="navbar">
+                <ul class="navlinks">
+                    <li><a href="../../index.html">notblue.<span class="red">red</span></a></li>
+                </ul>
+            </div>
+
+            <!-- blogpost -->
+            <div class="container">
+                <div class="container-title">Tonal variety versus tonal complexity</div>
+                <div class="container-text">In the world of music, tuning systems play a crucial role in shaping the sound and feel of a piece. Equal temperament tuning (TET), which divides an octave into a set number of equal steps, is one of the most widely used systems. However, the question arises: what is the optimal TET system for dividing the octave?</div>
+                <div class="container-text">Ideally, we would hit the perfect balance between tonal variety (the number of notes available for creative expression) and tonal complexity (the accuracy of harmonic intervals). For example:</div>
+                <div class="container-text">Smaller TET systems (like the 12-TET system we use in almost all modern music composition) are comparatively easy to tune and use, offering a manageable balance between variety and complexity. In a 12-TET system, an octave is divided into 12 equal intervals. To calculate the frequency difference between notes, each note is multiplied by the 12th root of 2.</div>
+                <div class="container-image" style="max-width: 400px;">
+                    <img src="circle-12-tet.png" alt="">
+                </div>
+                <div class="container-text">Larger TET systems (like 19-TET or 27-TET) provide greater tonal variety but often at the price of greater harmonic inaccuracies. In a 19-TET system, an octave is divided into 19 equal intervals. To calculate the frequency difference between notes, each note is multiplied by the 19th root of 2.</div>
+                <div class="container-text" style="font-weight: 600;">Tonal variety</div>
+                <div class="container-text">Tonal variety refers to the range of melodic possibilities within a given system. The more notes a system has, the more potential combinations exist for constructing melodies. For instance, a 10-tone melody in a 12-TET system can have 12^10 (61 billion) possible combinations. As we increase the number of divisions in the TET system, the number of possible melodies grows exponentially.</div>
+                <div class="container-text">12-TET: ~ 61.9 billion melodies <br> 19-TET: ~ 613.1 billion melodies <br> 27-TET: ~ 205.8 trillion melodies <br><br></div>
+                <div class="container-text" style="font-weight: 600">Tonal complexity</div>
+                <div class="container-text">Tonal complexity refers to how accurately these divisions can approximate pure intervals, like perfect fifths or thirds, commonly found in natural harmonic systems. As TET systems increase their divisions, they may sacrifice the purity of intervals. For instance, the ratio of a perfect fifth (3:2) in a 12-TET system is an approximation, not an exact match.</div>
+                <div class="container-text">Why does this matter? We tend to enjoy music when the frequency ratios between notes are simple, such as 3/2 for a perfect fifth or 4/3 for a perfect fourth. These low-number fractions are easy for our brains to process, creating a sense of consonance. When the ratios become more complex, such as 19/16, the intervals are harder to perceive harmonically, leading to dissonance. </div>
+                <div class="container-text">To illustrate, the ease with which we comprehend these simple ratios is also evident in rhythm. For instance, a 3/4 polyrhythm (three beats played against four beats) is a very common, easy-to-follow rhythm because the two patterns meet up after only 12 beats (the least common multiple of 3 and 4). This allows the brain to recognize the repeating cycle quickly, making the rhythm feel natural and intuitive.</div>
+                <div class="container-image" style="max-width: 400px;">
+                    <img src="polyrythm-1.png" alt="">
+                </div>
+                <div class="container-text">In contrast, a polyrhythm like 16/19 is much harder to grasp. The two patterns only meet up after 304 beats, making it extremely difficult for our brain to detect a repeating cycle. This is why rhythms like 16/19 are uncommon in most musical styles. Our brains simply struggle to comprehend them as musically pleasing or natural.</div>
+                <div class="container-image" style="max-width: 400px;">
+                    <img src="polyrythm-2.png" alt="">
+                </div>
+                <div class="container-text">Let us examine how the 12-TET system compares in terms of the error it produces when approximating simple fractional relationships between two notes. We will limit these fractions to a maximum numerator and denominator of 20. This already pushes tonal complexity, as it would take a musical genius to appreciate a ratio like 16/19 (which would fall within the 20/20 range). Moreover, as we will see, 12-TET does not exactly match these fractions to begin with.<br><br></div>
+                <table>
+                    <tr>
+                      <th>Interval</th>
+                      <th>Frequency Ratio</th>
+                      <th>Nearest Low Fraction</th>
+                      <th>Error (%)</th>
+                    </tr>
+                    <tr>
+                      <td>A → A</td>
+                      <td>1</td>
+                      <td>1/1</td>
+                      <td>0.00%</td>
+                    </tr>
+                    <tr>
+                      <td>A → A♯</td>
+                      <td>1.0595</td>
+                      <td>18/17</td>
+                      <td>0.06%</td>
+                    </tr>
+                    <tr>
+                      <td>A → B</td>
+                      <td>1.1225</td>
+                      <td>9/8</td>
+                      <td>0.23%</td>
+                    </tr>
+                    <tr>
+                      <td>A → C</td>
+                      <td>1.1892</td>
+                      <td>19/16</td>
+                      <td>0.14%</td>
+                    </tr>
+                    <tr>
+                      <td>A → C♯</td>
+                      <td>1.2599</td>
+                      <td>19/15</td>
+                      <td>0.54%</td>
+                    </tr>
+                    <tr>
+                      <td>A → D</td>
+                      <td>1.3348</td>
+                      <td>4/3</td>
+                      <td>0.11%</td>
+                    </tr>
+                    <tr>
+                      <td>A → D♯</td>
+                      <td>1.4142</td>
+                      <td>17/12</td>
+                      <td>0.17%</td>
+                    </tr>
+                    <tr>
+                      <td>A → E</td>
+                      <td>1.4983</td>
+                      <td>3/2</td>
+                      <td>0.11%</td>
+                    </tr>
+                    <tr>
+                      <td>A → F</td>
+                      <td>1.5874</td>
+                      <td>19/12</td>
+                      <td>0.26%</td>
+                    </tr>
+                    <tr>
+                      <td>A → F♯</td>
+                      <td>1.6818</td>
+                      <td>5/3</td>
+                      <td>0.90%</td>
+                    </tr>
+                    <tr>
+                      <td>A → G</td>
+                      <td>1.7818</td>
+                      <td>16/9</td>
+                      <td>0.23%</td>
+                    </tr>
+                    <tr>
+                      <td>A → G♯</td>
+                      <td>1.8877</td>
+                      <td>17/9</td>
+                      <td>0.06%</td>
+                    </tr>
+                    <tr>
+                      <td>A → A2</td>
+                      <td>2</td>
+                      <td>2/1</td>
+                      <td>0.00%</td>
+                    </tr>
+                  </table><br><br>
+                <div class="container-text">In the 12-TET system shown, the maximum error is 0.9% for the interval between A and F♯. This means, assuming our brain finds all fractions within 20/20 harmonious, the most "out of tune" we experience is a small deviation of 0.9% from a fraction we can naturally perceive as beautiful.<br><br></div>
+                <div class="container-text" style="font-weight: 600;">Balanced TET systems</div>
+                <div class="container-text">To find the optimal TET system, we calculate the maximum error in tonal intervals across various TET systems and the number of different 10-tone melodies we can create with that TET system. This helps us identify the point where increased tonal complexity outweighs the benefit of additional tonal variety.</div>
+                <div class="container-image" style="max-width: 600px;">
+                    <img src="variety-vs-complexity.png" alt="">
+                </div>
+                <div class="container-text">As we can see, there is a point where the maximum error starts to spike. Past this point, we have to really ask ourselves if the extra tonal variety is really worth the added dissonance? As a bonus for making it this far, <a href="https://www.youtube.com/watch?v=Vfj39Fc6X8w" target="_blank">here</a> is a video of a piece written in 19-TET.</div>
+            </div>
+
+            <!-- resources -->
+            <div class="resources">
+                <div class="resources-title">Materials</div>
+                <div class="resources-download">
+                    <div class="ref">The code is available <a href="material/music-circle.ipynb" download="code.ipynb">here.</a></div>
+                </div>
+            </div>
+
+            <!-- references -->
+            <div class="references">
+                <div class="references-title">Literature</div>
+                <div class="ref">[1] Wikipedia. 12 Equal Temperament. <a href="https://en.wikipedia.org/wiki/12_equal_temperament" target="_blank">Link.</a></div>
+                <div class="ref">[2] Wikipedia. 19 Equal Temperament. <a href="https://en.wikipedia.org/wiki/19_equal_temperament" target="_blank">Link.</a></div>
+                <div class="ref">[3] Example of 19 Equal Temperament Music. <a href="https://www.youtube.com/watch?v=Vfj39Fc6X8w" target="_blank">Link.</a></div>
+                <div class="ref">[4] Grant Sanderson. Music And Measure Theory. <a href="https://www.youtube.com/watch?v=cyW5z-M2yzw&t=706s" target="_blank">Link.</a></div>
+            </div>
+            
+            <!-- contact -->
+            <div class="contact">
+                <div class="contact-headline"></div>
+                <div class="contact-description">Institute of<br>Environmental Systems Sciences<br>Merangasse 18,<br>8010 Graz</div>
+                <div class="contact-email">daniel.reisinger@uni-graz.at</div>
+            </div>
+        </div>
+    </body>
+
+    <style>
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        th, td {
+          text-align: left;
+          padding: 8px;
+          border-bottom: 1px solid #ddd;
+        }
+      </style>
+</html>
