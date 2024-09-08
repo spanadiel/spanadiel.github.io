@@ -77,6 +77,37 @@ div.container-image img {
     height: 100%;
 }
 
+/* Resources */
+div.resources {
+    position: relative;
+    max-width: 600px;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+div.resources-title {
+    font-size: 2em;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+
+/* References */
+div.references {
+    position: relative;
+    max-width: 600px;
+    padding: 30px;
+    padding-bottom: 110px;
+    margin: 0 auto;
+}
+div.references-title {
+    font-size: 2em;
+    font-weight: 400;
+    padding-bottom: 30px;
+}
+div.ref {
+    padding-bottom: 10px;
+}
+
 
 /* Contact */
 div.contact {
