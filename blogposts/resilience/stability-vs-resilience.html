@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- set meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="daniel reisinger, university of graz, critical transitions, early warning signals, complex networks, computational basics">
+        <meta name="author" content="Daniel Reisinger">
+
+        <!-- set title -->
+        <title>Daniel Reisinger</title>
+
+        <!-- set canonical -->
+        <link rel="canonical" href="https://notblue.red">
+
+        <!-- set font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet"> 
+
+        <!-- set icon -->
+        <link rel="icon" type="image/x-icon" href="../../images/icon.png">
+        
+        <!-- set style -->
+        <link href="../blogstyle.css" rel="stylesheet">
+
+        <!-- icons -->
+        <a href="https://www.flaticon.com/free-icons/picking" title="picking icons"></a>
+        <a href="https://www.flaticon.com/free-icons/fist" title="fist icons"></a>
+    </head>
+
+    <body>
+        <div class="page">
+
+            <!-- navigation -->
+            <div class="navbar">
+                <ul class="navlinks">
+                    <li><a href="../../index.html">notblue.<span class="red">red</span></a></li>
+                </ul>
+            </div>
+
+            <!-- blogpost -->
+            <div class="container">
+                <div class="container-title">What is the difference between stability and resilience?</div>
+                <div class="container-text">Many websites about stability and resilience offer very confusing descriptions, and quite often, mix up the two concepts. In this blogpost, I want to give you a metaphor that will help you decide when to use the concept of stability and when to add resilience. Spoiler: it is not either or!</div>
+                <div class="container-text"><u>Stability</u> tells your whether a system can withstand change. If it can, it is stable, if not, it is unstable. </div>
+                <div class="container-text"><u>Resilience</u> tells how quickly a system can recover from change. If it recovers quickly, it is more resilient, if it recovers slowly, it is less resilient.</div>
+                <div class="container-text">To illustrate, think of a ball dropped into a bowl (Figure, ball A). The ball will roll down the bowl and come to rest at the bottom of the bowl. If left alone (no shaking or pushing), the ball will remain in this position forever. This position is a stable state or an attractor. Why? Because it attracts (due to gravity) the ball from surrounding positions.</div>
+
+                <div class="container-image" style="max-width: 500px;">
+                    <img src="stability-vs-resilience.png" alt="">
+                </div>
+
+                <div class="container-text">Now think of a ball carefull balanced on top of a hill (Figre, ball B). Again, if left completely alone (no shaking or pushing), the ball will remain in this position forever. Sounds pretty stable, right? Actually, it is quite the opposite. In fact, we call the top of the hill an unstable state, or a repeller. Why? Because any deviation from that exact postion repells the ball away from it.</div>
+                <div class="container-text">What about their resilience? The stable state of ball A is also resilient. This is inherent to every stable state, they all are resilient. However, they are not equally resilient. Some bowls are steeper, causing the ball to recover more quickly after a displacement (shaking or pushing), and some bowls are flatter, causing the ball to recover more slowly after the same displacement.</div>
+                <div class="container-text">Contrary, the unstable state of ball B is not resilient at all. This is inherent to every unstable state. Still, we could ask, how much "none-resilient" it is. Again, some hills are steeper, causing the ball to quickly move away from the unstable state, while others are flatter, causing the ball to move away more slowly. </div>
+                <div class="container-text">So, resilience is a concept that can be added on top of the concept of stability. That being said, we typically only ask "how resilient" a stable state is, and not how "none-resilient" an unstable state is. </div>
+                <div class="container-text">As a final example, let us look at the double-bowl system in the figure above. The system has three steady states. Two stable states or attractors (C and E), and an unstable state or repeller (D). If we shake the system, and track how quickly the balls recover, we will find that the stable state C is more resilient than the stable state E, while the unstable state D is not resilient at all.</div>
+            
+            </div>
+
+            <!-- references -->
+            <div class="references">
+                <div class="references-title">Literature</div>
+                <div class="ref">[1] Flaticon. Grab icon created by vectorspoint. <a href="https://www.flaticon.com/">Link.</a></div>
+                <div class="ref">[2] Flaticon. Picking icon created by photo3ideastudio. <a href="https://www.flaticon.com/">Link.</a></div>
+
+            </div>
+            
+            <!-- contact -->
+            <div class="contact">
+                <div class="contact-headline"></div>
+                <div class="contact-description">Institute of<br>Environmental Systems Sciences<br>Merangasse 18,<br>8010 Graz</div>
+                <div class="contact-email">daniel.reisinger@uni-graz.at</div>
+            </div>
+        </div>
+    </body>
+</html>
