@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- set meta -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="daniel reisinger, university of graz, critical transitions, early warning signals, complex networks, computational basics">
+        <meta name="author" content="Daniel Reisinger">
+
+        <!-- set title -->
+        <title>What is regulation in system science - Daniel Reisinger</title>
+
+        <!-- set canonical -->
+        <link rel="canonical" href="https://notblue.red">
+
+        <!-- set font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap" rel="stylesheet"> 
+
+        <!-- set icon -->
+        <link rel="icon" type="image/x-icon" href="../../images/icon.png">
+        
+        <!-- set style -->
+        <link href="../blogstyle.css" rel="stylesheet">
+
+        <!-- icons -->
+        <a href="https://www.flaticon.com/free-icons/picking" title="picking icons"></a>
+        <a href="https://www.flaticon.com/free-icons/fist" title="fist icons"></a>
+    </head>
+
+    <body>
+        <div class="page">
+
+            <!-- navigation -->
+            <div class="navbar">
+                <ul class="navlinks">
+                    <li><a href="../../index.html">notblue.<span class="red">red</span></a></li>
+                </ul>
+            </div>
+
+            <!-- blogpost -->
+            <div class="container">
+                <div class="container-title">What is regulation in systems science?</div>
+
+                <div class="container-text">"Every good regulator of a system must be a model of that system", is the title of a highly cited paper written back in 1970 [1].</div>
+                <div class="container-text">Whether you have a background in law, politics, economics, biology, or physics, there is some universal truth about this proposition. Effective regulation is impossible without an accurate model of the system. Even if that model exists only implicitly in our minds, without it, any regulatory action becomes little more than blind guesswork, with unpredictable and often unintended consequences.</div>
+                <div class="container-text">In this blogpost, we will look at regulation through examples from various fields, moving from linear to nonlinear and ultimately to chaotic regulation. Along the way, we will see that even with an accurate model at hand, there are limits to what regulation can achieve.</div>
+
+                <div class="containter-text"><br><br></div>
+                <div class="container-text" style="font-weight: 600;">Linear regulation of consumer demand</div>
+                <div class="container-text">In a simple linear system, regulation is straightforward. For example, increasing the price of a product (regulation) means that consumers will by less of that product (impact). Because we have a linear demand, the relationship between regulation and impact is the same anywhere on that demand function.</div>
+                <div class="container-image" style="max-width: 500px;">
+                    <img src="linear-regulation.png" alt="">
+                </div>
+
+                <div class="containter-text"><br><br></div>
+                <div class="container-text" style="font-weight: 600;">Non-linear regulation of forest fires</div>
+                <div class="container-text">Not all systems respond smoothly to regulation. Take a dense, overgrown forest: initially, reducing tree density (regulation) may have little to no effect on the area burned in a wildfire (impact). However, once a critical threshold is crossed, where trees are spaced far enough apart that fire struggles to spread, the fire size drops dramatically. In such a non-linear system, regulation has virtually no impact over a wide range of conditions until, suddenly, it has an enormous effect.</div>              
+                <div class="container-image" style="max-width: 500px;">
+                    <img src="logistic-regulation.png" alt="">
+                </div>
+
+                <div class="containter-text"><br><br></div>
+                <div class="container-text" style="font-weight: 600;">Hysteretic regulation of shallow lakes</div>
+                <div class="container-text">Some systems can even resist back-regulation. Take a clear and healthy shallow lake: increasing waste loading (regulation) can abruptly push it into a turbid and algae-dominated state. However, once the lake has tipped, simply reducing waste (back-regulation) won’t restore its clarity. Instead, the system demands significantly stronger corrective action to overcome the hysteretic effect, making reversal far more challenging than the initial shift.</div>
+                <div class="container-image" style="max-width: 500px;">
+                    <img src="hysteretic-regulation.png" alt="">
+                </div>
+
+                <div class="containter-text"><br><br></div>
+                <div class="container-text" style="font-weight: 600;">Uncertain regulation of magnets</div>
+                <div class="container-text">Some systems introduce uncertainty in their response. In magnets, changing the temperature past a critical point leads to a pitchfork bifurcation, where magnetization can flip to either a positive or negative state. Here, regulation works, but the direction of the impact becomes unpredictable.</div>
+                <div class="container-image" style="max-width: 500px;">
+                    <img src="probabilistic-regulation.png" alt="">
+                </div>
+
+                <div class="containter-text"><br><br></div>
+                <div class="container-text" style="font-weight: 600;">Chaotic regulation of bacterial growth</div>
+                <div class="container-text">What if such bifurcations keep stacking up? In chaotic systems like stylized bacterial logistic growth, regulation can become nearly impossible. Here, a small change in the population growth (regulation) can lead to potentially infinately many different future population sizes (impact), making long-term prediction impossible. Regulating the system into this chaotic domain, actually means we are giving up more and more control over it.</div>
+                <div class="container-image" style="max-width: 500px;">
+                    <img src="chaotic-regulation.png" alt="">
+                </div>
+
+
+                                
+                <div class="container-text">Effective regulation demands an accurate model of the system’s behavior. Linear systems are easy to control, but nonlinear, hysteretic, probabilistic, or chaotic systems require careful understanding of their stability landscapes. Without this knowledge, regulation can be ineffective and costly.</div>
+
+            
+            </div>
+
+            <!-- references -->
+            <div class="references">
+                <div class="references-title">Literature</div>
+                <div class="ref">[1] Roger C. Conant, W. Ross Ashby. Every good regulator of a system must be a model of that system. <a href="https://www.tandfonline.com/doi/abs/10.1080/00207727008920220">Link.</a></div>
+                <div class="ref">[2] Hiroki Sayama. Introduction to the modeling and analysis of complex systems. <a href="https://open.umn.edu/opentextbooks/textbooks/233">Link.</a></div>
+            </div>
+            
+            <!-- contact -->
+            <div class="contact">
+                <div class="contact-headline"></div>
+                <div class="contact-description">Institute of<br>Environmental Systems Sciences<br>Merangasse 18,<br>8010 Graz</div>
+                <div class="contact-email">daniel.reisinger@uni-graz.at</div>
+            </div>
+        </div>
+    </body>
+</html>
