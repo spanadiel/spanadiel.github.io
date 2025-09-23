@@ -36,7 +36,7 @@ div.welcome-container {
     position: relative;
     max-width: 1200px;
     height: auto;
-    background-image: url('images/banner.jpg'); /* Set the path to your image */
+    background-image: url('images/daniel-reisinger-banner.jpg'); /* Set the path to your image */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background image */
 }
@@ -341,4 +341,5 @@ div.contact-disclaimer {
     ul.navlinks {
         display: block;
     }
+
 }
